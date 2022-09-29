@@ -15,3 +15,8 @@ Error: Invalid legacy provider address」に対処する
 https://qiita.com/ymnk3/items/46ec33eb71779b03fa8a
 
 ■aws の認証一覧はUbuntuのIPが変わるたびに設定が必要？
+  
+■terraform を利用したapache インストール   
+Httpd webサーバ上のデーモン（常駐プログラム)  
+yum install -y httpd →apacheインストール  
+systemctl start httpd.service

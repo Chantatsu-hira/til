@@ -1,9 +1,4 @@
-●無料ドメイン
-Freenum
-アカウント情報
-Mail awk.owi.1119@gmail.com
-Pass Awkowi4311
-https://my.freenom.com/clientarea.php
+
 
 ●freenomで取得したドメインをRoute53に委任する
 https://blog.serverworks.co.jp/delegate-route53

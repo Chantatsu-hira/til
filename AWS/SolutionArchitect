@@ -1,0 +1,17 @@
+■3-2　Route53
+Route53にはAliasレコード情報を登録可能。
+Aliasレコード　AWSリソースのFQDNを指定指定可能。
+Cnameとの違い：最上位ドメインを登録可能（重複可能）。
+CNAMEの制約：
+CNAME レコードで利用しているレコード名と同一のレコード名で、別タイプのレコードを指定できない（他レコードと重複してはいけない）。これは公式の制約
+よってApexレコードにCNAMEレコードを登録することも不可。
+
+https://dev.classmethod.jp/articles/tsnote-dns-record-apex-domain/
+
+そこで機能するのが Route 53 で用意されているエイリアスレコードというものです。分類上は A レコードでありながら、裏側では CNAME のように「 AWS リソースが持つデフォルトドメイン名」に対してエイリアスを設定できるイメージです。
+https://dev.classmethod.jp/articles/cname-resouce-record-conflict/#toc-3
+
+■5-3 Cloud watch trailとCloud watch logの連携
+
+・以下の流れによって不正操作を検知可能
+Cloud watch trailでログ監査＆出力→Cloud watch logでの監視→「〇〇という文字列が含まれる」など、条件を設定し、次のアクションを設定
